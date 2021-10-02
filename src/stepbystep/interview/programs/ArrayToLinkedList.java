@@ -7,6 +7,7 @@ import java.util.LinkedList;
 
 public class ArrayToLinkedList {
 
+	// Instance Variables
 	private int lengthCounter = 1;
 	private int loopCounter = 0;
 	
@@ -14,12 +15,18 @@ public class ArrayToLinkedList {
 
 	public Integer computeLength(int[] numArr) {
 
+		// Check for Array is Empty
 		if (numArr.length == 0) {
 			return 0;
+			
+		// Check whether Array contains only 1 element
 		} else if (numArr.length == 1) {
+			list.add(numArr[loopCounter]);
+			System.out.println("Formed Linked List -> "+list);
 			return 1;
 		}
 	
+		// do-while loop to form the Linked List and to find the length of the liked list
 		do {
 			list.add(numArr[loopCounter]);			
 			lengthCounter++;
